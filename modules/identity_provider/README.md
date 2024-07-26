@@ -31,10 +31,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_account_id"></a> [account\_id](#input\_account\_id) | n/a | `string` | n/a | yes |
+| <a name="input_cloudflare_account_id"></a> [cloudflare\_account\_id](#input\_cloudflare\_account\_id) | n/a | `string` | n/a | yes |
 | <a name="input_github_client_id"></a> [github\_client\_id](#input\_github\_client\_id) | n/a | `string` | n/a | yes |
 | <a name="input_github_client_secret"></a> [github\_client\_secret](#input\_github\_client\_secret) | n/a | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
 
 ## Outputs
 

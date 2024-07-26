@@ -5,3 +5,11 @@ module "identity_provider" {
   github_client_id      = var.github_client_id
   github_client_secret  = var.github_client_secret
 }
+
+module "organization" {
+  source = "../../modules/organization"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "Alflag"
+  auth_domain           = var.auth_domain
+}
