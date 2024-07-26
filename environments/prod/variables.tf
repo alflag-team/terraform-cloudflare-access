@@ -1,8 +1,8 @@
 variable "cloudflare_api_token" {
-  type        = string
+  type = string
 }
 
-variable "account_id" {
+variable "cloudflare_account_id" {
   type = string
 }
 
