@@ -46,7 +46,7 @@ module "application__dsm" {
   source = "../../modules/application"
 
   cloudflare_account_id = var.cloudflare_account_id
-  name                  = "Synology Drive"
+  name                  = "DSM"
   domain                = "dsm.alflag.org"
   type                  = "self_hosted"
   session_duration      = "24h"
