@@ -21,3 +21,23 @@ module "group__alflag_admins" {
   name                  = "Alflag admins"
   require_auth_method   = "github"
 }
+
+module "policy__alflag_admins" {
+  source = "../../modules/policy"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "Alflag admins"
+  decision              = "allow"
+  include_group         = module.group__alflag_admins.id
+}
+
+module "application__proxmox" {
+  source = "../../modules/application"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "Proxmox"
+  domain                = "proxmox.alflag.org"
+  type                  = "SELF-HOSTED"
+  session_duration      = "24h"
+  policies              = [module.policy__alflag_admins.id]
+}
