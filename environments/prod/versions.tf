@@ -6,15 +6,15 @@ terraform {
     }
   }
 
-  # cloud {
-  #   organization = "alflag"
+  cloud {
+    organization = "alflag"
 
-  #   workspaces {
-  #     name = "cloudflare-access"
-  #   }
-  # }
-
-  backend "local" {
-    path = "local.tfstate"
+    workspaces {
+      name = "cloudflare-access"
+    }
   }
+
+  # backend "local" {
+  #   path = "local.tfstate"
+  # }
 }
