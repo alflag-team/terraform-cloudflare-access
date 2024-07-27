@@ -17,9 +17,10 @@ module "organization" {
 module "group__alflag_admins" {
   source = "../../modules/group"
 
-  cloudflare_account_id = var.cloudflare_account_id
-  name                  = "Alflag admins"
-  require_auth_method   = "github"
+  cloudflare_account_id       = var.cloudflare_account_id
+  name                        = "Alflag admins"
+  require_auth_method         = "github"
+  github_identity_provider_id = module.identity_provider.id
 }
 
 module "policy__alflag_admins" {

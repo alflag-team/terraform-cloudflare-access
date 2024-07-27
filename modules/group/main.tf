@@ -3,10 +3,10 @@ resource "cloudflare_access_group" "main" {
   name       = var.name
 
   include {
-    email_domain = var.include_email_domain
-  }
-
-  require {
-    auth_method = var.require_auth_method
+    github {
+      identity_provider_id = var.github_identity_provider_id
+      name                 = var.github_name
+      teams                = var.github_teams
+    }
   }
 }

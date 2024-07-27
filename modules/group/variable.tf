@@ -14,3 +14,17 @@ variable "include_email_domain" {
 variable "require_auth_method" {
   type = string
 }
+
+variable "github_identity_provider_id" {
+  type = string
+}
+
+variable "github_name" {
+  type    = string
+  default = "alflag-team"
+}
+
+variable "github_teams" {
+  type    = list(string)
+  default = ["infra"]
+}
