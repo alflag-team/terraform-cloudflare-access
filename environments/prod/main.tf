@@ -28,7 +28,7 @@ module "policy__alflag_admins" {
   cloudflare_account_id = var.cloudflare_account_id
   name                  = "Alflag admins"
   decision              = "allow"
-  include_group         = module.group__alflag_admins.id
+  include_group         = [module.group__alflag_admins.id]
 }
 
 module "application__proxmox" {
