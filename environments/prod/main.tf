@@ -41,3 +41,36 @@ module "application__proxmox" {
   session_duration      = "24h"
   policies              = [module.policy__alflag_admins.id]
 }
+
+module "application__dsm" {
+  source = "../../modules/application"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "Synology Drive"
+  domain                = "dsm.alflag.org"
+  type                  = "self_hosted"
+  session_duration      = "24h"
+  policies              = [module.policy__alflag_admins.id]
+}
+
+module "application__zabbix" {
+  source = "../../modules/application"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "Zabbix"
+  domain                = "zabbix.alflag.org"
+  type                  = "self_hosted"
+  session_duration      = "24h"
+  policies              = [module.policy__alflag_admins.id]
+}
+
+module "application__synology_drive" {
+  source = "../../modules/application"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "Synology Drive"
+  domain                = "drive.alflag.org"
+  type                  = "bookmark"
+  session_duration      = "24h"
+  policies              = [module.policy__alflag_admins.id]
+}
