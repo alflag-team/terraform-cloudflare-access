@@ -13,3 +13,11 @@ module "organization" {
   name                  = "Alflag"
   auth_domain           = var.auth_domain
 }
+
+module "group__alflag_admins" {
+  source = "../../modules/group"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "Alflag admins"
+  require_auth_method   = "github"
+}
