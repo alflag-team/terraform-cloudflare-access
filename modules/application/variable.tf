@@ -15,7 +15,7 @@ variable "type" {
 }
 
 variable "session_duration" {
-  type = number
+  type = string
 }
 
 variable "policies" {
