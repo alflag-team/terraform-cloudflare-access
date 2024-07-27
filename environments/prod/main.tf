@@ -37,7 +37,7 @@ module "application__proxmox" {
   cloudflare_account_id = var.cloudflare_account_id
   name                  = "Proxmox"
   domain                = "proxmox.alflag.org"
-  type                  = "SELF-HOSTED"
+  type                  = "self_hosted"
   session_duration      = "24h"
   policies              = [module.policy__alflag_admins.id]
 }
