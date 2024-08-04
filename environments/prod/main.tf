@@ -75,3 +75,14 @@ module "application__synology_drive" {
   session_duration      = "24h"
   policies              = [module.policy__alflag_admins.id]
 }
+
+module "application__ai" {
+  source = "../../modules/application"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "AI"
+  domain                = "ai.alflag.org"
+  type                  = "self_hosted"
+  session_duration      = "24h"
+  policies              = [module.policy__alflag_admins.id]
+}
