@@ -86,3 +86,14 @@ module "application__ai" {
   session_duration      = "24h"
   policies              = [module.policy__alflag_admins.id]
 }
+
+module "application__ptero_panel" {
+  source = "../../modules/application"
+
+  cloudflare_account_id = var.cloudflare_account_id
+  name                  = "MCPlayNetwork Panel"
+  domain                = "panel.mcplay.biz"
+  type                  = "self_hosted"
+  session_duration      = "24h"
+  policies              = [module.policy__alflag_admins.id]
+}
